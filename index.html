@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바뮤호텔</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mySwipermain_visual", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+            
+            var swiper = new Swiper(".item_swiper", {
+                slidesPerView: 3,
+                spaceBetween: 120,
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    hide: false,
+                },
+            });
+
+            
+            var swiper = new Swiper(".mySwiper_image", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+           
+            let L_btn = document.querySelector('.left_button')
+            let L_img = document.querySelector('.left_image')
+            let L_OL = document.querySelector('.left_overlay')
+
+            L_btn.addEventListener('click', function (event) {
+                event.preventDefault();// 
+                //L_img.classList.toggle('active')
+                L_OL.classList.toggle('active')
+            });//
+
+
+            L_OL.addEventListener('click', function (event) {
+                if (event.target === L_OL)
+                    L_OL.classList.remove('active');//
+
+            });
+
+
+            let R_btn = document.querySelector('.right_button')
+            let R_img = document.querySelector('.right_image')
+            let R_OL = document.querySelector('.right_overlay')
+
+            R_btn.addEventListener('click', function (event) {
+                event.preventDefault();// 
+                /* R_img.classList.toggle('active') */
+                R_OL.classList.toggle('active')
+            });//
+
+            R_OL.addEventListener('click', function (event) {
+                if (event.target === R_OL)
+                    R_OL.classList.remove('active');//
+
+            });
+            AOS.init({
+                once: true
+            });
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/logo1.png" alt="">
+                    <img src="img/logo2.png" alt="">
+                </a>
+            </h1>
+
+            <nav class="nav">
+                <ul class="gnb">
+
+                    <li>
+                        <a href="#" class="depth-01">소개</a>
+                        <ul class="depth-02">
+                            <li><a href="#">내부 사진</a></li>
+                            <li><a href="#">외부 사진</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth-01">객실 안내</a>
+                        <ul class="depth-02">
+                            <li><a href="#">시설</a></li>
+                            <li><a href="#">조식</a></li>
+                            <li><a href="#">스파</a></li>
+                            <li><a href="#">어메니티</a></li>
+                            <li><a href="#">주변 여행지</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth-01">객실 타입</a>
+                        <ul class="depth-02">
+                            <li><a href="#">프리미엄 오션 트윈</a></li>
+                            <li><a href="#">프리미엄 시티 트윈</a></li>
+                            <li><a href="#">디럭스 오션 킹</a></li>
+                            <li><a href="#">디럭스 시티 킹</a></li>
+                            <li><a href="#">펜트하우스</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth-01">위치 안내</a>
+                        <ul class="depth-02">
+                            <li><a href="#">위치 안내</a></li>
+                        </ul>
+                    </li>
+
+                </ul><!-- .gnb end -->
+            </nav><!-- .nav end -->
+
+            <div class="button">
+                <a href="#">예약하기</a>
+                <ul class="info_box">
+                    <li class="text">
+                        <p>Check-in</p>
+                        <p><b>3</b> AM</p>
+                    </li>
+                    <li class="text">
+                        <p>Check-out</p>
+                        <p><b>11</b> PM</p>
+                    </li>
+
+                </ul>
+            </div><!-- .button end -->
+
+        </div><!-- .inner end -->
+    </header><!-- .header end -->
+
+    <main class="main">
+        <div class="main_visual">
+            <!-- Swiper -->
+            <div class="swiper mySwipermain_visual">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="img/메인1-1.png" alt="">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="img/메인2.jpg" alt="">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="img/메인8.jpg" alt="">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="img/메인3.jpg" alt="">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="img/메인4-1.png" alt="">
+                    </div>
+
+                </div><!-- .swiper-wrapper end -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div><!-- .swiper end -->
+        </div><!-- .main_visual end -->
+
+        <section class="section_01">
+            <h4 data-aos="fade-up"
+            data-aos-duration="2000">꿈같은 휴양지, 오션뷰 객실을 보유한 바뮤 호텔입니다.</h4>
+            <div class="item_wrap">
+
+                <div class="item">
+                    <img src="img/icon/travel-hotel-bath-tub--bathe-bath-bathroom-towel-water-tub--Streamline-Core.png"
+                        alt="">
+                    <div class="text">
+                        <p>전 객실 스파 시설</p>
+                        <span>Spa facility</span>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/icon/guidance_24-hours.png" alt="">
+                    <div class="text">
+                        <p>24시간 운영</p>
+                        <span>Open 24 hours</span>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/icon/food-drinks-tea-cup--herbal-cook-tea-tisane-cup-drink-cooking-nutrition-mug-food--Streamline-Core.png"
+                        alt="">
+                    <div class="text">
+                        <p>간단한 아침 제공</p>
+                        <span>Breakfast service</span>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+                <div class="item">
+                    <img src="img/icon/Group.png" alt="">
+                    <div class="text">
+                        <p>편리한 위치</p>
+                        <span>Good location</span>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+
+            </div><!-- .item_wrap end -->
+        </section><!-- .section_01 end -->
+
+        <section class="section_02">
+
+            <div class="back_image"></div>
+
+            <div class="image" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+                <img src="img/섹션2-1.jpg" alt="">
+            </div><!-- .image end -->
+
+            <div class="text">
+
+                <div class="top_text" data-aos="fade-left" data-aos-duration="1500">
+                    <div class="title">
+                        <h2>소개</h2>
+                        <span>About</span>
+                    </div><!-- .title -->
+                    <p>바뮤호텔은 뛰어난 위치와 함께 고급스러운 숙박 경험을 제공하며,<br>
+                        여러분께 아늑하고 기억에 남을 휴가를 약속합니다.
+                    </p>
+                </div><!-- .top_text end -->
+
+                <div class="btn_wrap">
+
+                    <div class="item">
+                        <a href="#" class="left_button">room view</a>
+
+                        <div class="left_overlay">
+                            <div class="left_image">
+
+                                <div class="swiper mySwiper_image">
+
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="img/roomview/1.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/2.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/3.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/4.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/5.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/6.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/7.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/8.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/9.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/10.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/roomview/11.png" alt=""></div>
+                                    </div><!-- .swiper-wrapper end -->
+
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+
+                                </div><!-- .swiper end -->
+                            </div><!-- .left_image end -->
+
+                        </div><!-- .left_overlay end -->
+
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <a href="#" class="right_button">ocean view</a>
+
+                        <div class="right_overlay">
+                            <div class="right_image">
+
+                                <div class="swiper mySwiper_image">
+
+                                    <div class="swiper-wrapper"> 
+                                        <div class="swiper-slide"><img src="img/oceanview/1.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/oceanview/2.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/oceanview/3.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/oceanview/4.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/oceanview/5.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/oceanview/6.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/oceanview/7.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/oceanview/8.png" alt=""></div>
+                                    </div><!-- .swiper-wrapper end -->
+
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+
+                                </div><!-- .swiper end -->
+
+                            </div><!-- .right_image end -->
+                        </div><!-- .right_overlay -->
+
+                    </div><!-- .item end -->
+
+
+                </div><!-- .btn_wrap end -->
+
+            </div><!-- .text end -->
+
+        </section><!-- .section_02 end -->
+
+        <section class="section_03">
+
+            <div class="title">
+                <h2>객실 안내</h2>
+                <span>Rooms</span>
+            </div><!-- .title end -->
+
+            <div class="swiper item_swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="img/rooms/spa.jpeg" alt="">
+                        <div class="text">
+                            <h6>전객실 대형 스파</h6>
+                            <p>모든 객실에는 최고급 대형 스파 시설이 완비되어 있어, 언제든지 편안하고 럭셔리한 휴식을 즐길 수
+                                있습니다.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <img src="img/rooms/전면뷰 1.png" alt="">
+                        <div class="text">
+                            <h6>바다 앞 전면뷰</h6>
+                            <p>해변 전망 객실은 호텔이 해변 바로 앞에 위치하여 자연의 아름다움을 최대한으로 즐길 수 있는 곳입니다.
+                                넓은 창문을 통해 쏟아지는 자연광과 함께
+                                환상적인 오션뷰를 만끽해보세요.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <img src="img/rooms/조식 1.png" alt="">
+                        <div class="text">
+                            <h6>건강한 아침식사</h6>
+                            <p>신선한 샌드위치와 아이스커피, 요거트, 주스, 견과류, 구운계란 등이 포함 되어 있습니다.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <img src="img/rooms/펜트하우스.jpg" alt="">
+                        <div class="text">
+                            <h6>펜트하우스</h6>
+                            <p>최대 수용 인원이 10명인 펜트하우스를 이용하여 단체 손님도 여유롭게 맞이할 수 있습니다. 가족이나 친구들과의 소중한 시간과 특별한 모임에 이상적인 선택이 될
+                                것입니다.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <img src="img/rooms/스탠바이미2 1.png" alt="">
+                        <div class="text">
+                            <h6>다양한 가전제품</h6>
+                            <p>스탠바이미, 다이슨 스타일러, 빔 프로젝터 등
+                                편리함을 위해 다양한 제품들을 구비해두었습니다.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <img src="img/rooms/향수 1.png" alt="">
+                        <div class="text">
+                            <h6>고급 어메니티</h6>
+                            <p>집중 영양을 공급해주는 kiehls 샴푸, 린스와 잔향이 오래가는 entre d'eux 바디워시등 준비된 고급진 어메니티를 사용해보세요.
+                            </p>
+                        </div><!-- .text end -->
+                    </div><!-- .swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <img src="img/rooms/커피머신2 2.png" alt="">
+                        <div class="text">
+                            <h6>큐리그 캡슐머신</h6>
+                            <p>큐리그 캡슐머신은 최고의 음료 및 맞춤 제작을 제공합니다. 간편한 이용으로 풍미 가득한 커피를
+                                즐겨보세요.
+                            </p>
+                        </div><!-- .text end -->
+                    </div><!-- .swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <img src="img/rooms/광안대교 1.png" alt="">
+                        <div class="text">
+                            <h6>주변 여행지</h6>
+                            <p>바로 앞에 위치한 광안리 해수욕장과 3분 거리에 있는 신세계 센텀 시티, 부산 시립 미술관 등
+                                부산의 여러 명소를 손쉽게 탐방할 수 있습니다.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .swipe-slide end -->
+
+                </div><!-- .swiper-wrapper end -->
+                <div class="swiper-scrollbar"></div>
+            </div><!-- .item_wrap end -->
+        </section><!-- .section_03 end -->
+
+        <section class="section_04">
+            <div class="title">
+                <h2>객실 타입</h2>
+                <span>Room type</span>
+            </div><!-- .title end -->
+
+            <div class="item_wrap">
+
+                <div class="item" data-aos="fade-up" data-aos-duration="3000">
+                    <a href="#">
+                        <img src="img/type/프리미엄오션킹2 2.png" alt="">
+                        <p>Premium Ocean Twin</p>
+                    </a>
+                </div><!-- .item end -->
+
+                <div class="item" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="50" data-aos-offset="200">
+                    <a href="#">
+                        <img src="img/type/프리미엄시티트윈3.jpg" alt="">
+                        <p>Premium City Twin</p>
+                    </a>
+                </div><!-- .item end -->
+
+                <div class="item" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="50" data-aos-offset="200">
+                    <a href="#">
+                        <img src="img/type/디럭스오션킹2 2.png" alt="">
+                        <p>Deluxe Ocean King</p>
+                    </a>
+                </div><!-- .item end -->
+
+                <div class="item" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="50" data-aos-offset="200">
+                    <a href="#">
+                        <img src="img/type/디럭스시티킹.jpg" alt="">
+                        <p>Deluxe City King</p>
+                    </a>
+                </div><!-- .item end -->
+
+                <div class="item" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="50" data-aos-offset="200">
+                    <a href="#">
+                        <img src="img/type/펜트하우스1.jpg" alt="">
+                        <p>Penthouse</p>
+                    </a>
+                </div><!-- .item end -->
+
+            </div><!-- .item_wrap end -->
+
+        </section><!-- .section_04 end -->
+
+        <section class="section_05">
+
+            <div class="text_wrap" data-aos="fade-right" data-aos-duration="1700">
+
+                <div class="title">
+                    <h2>위치 안내</h2>
+                    <span>Location</span>
+                </div><!-- .title end -->
+
+                <div class="bottom_text">
+                    <div class="text">
+                        <p>자동차</p>
+                        <span>부산 수영구 민락수변로 15</span>
+                    </div><!-- .text end -->
+                    <div class="text">
+                        <p>버스</p>
+                        <span>민락동 골목시장 정류장에서 하차<br>
+                            (62, 41, 83, 108, 38, 83-1번)</span>
+                    </div><!-- .text end -->
+                    <div class="text">
+                        <p>지하철</p>
+                        <span>광안역(2호선)에서 하차하여 도보로 20분</span>
+                    </div><!-- .text end -->
+                </div><!-- .bottom_text end -->
+
+            </div><!-- .text_wrap end -->
+
+            <div class="item_wrap">
+                <!-- * 카카오맵 - 지도퍼가기 -->
+                <!-- 1. 지도 노드 -->
+                <div id="daumRoughmapContainer1741760817144" class="root_daum_roughmap root_daum_roughmap_landing">
+                </div>
+
+                <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+                <script charset="UTF-8" class="daum_roughmap_loader_script"
+                    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                <!-- 3. 실행 스크립트 -->
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        "timestamp": "1741760817144",
+                        "key": "2nbip",
+                        "mapWidth": "750",
+                        "mapHeight": "400"
+                    }).render();
+                </script>
+            </div><!-- .item_wrap end -->
+
+        </section><!-- .section_05 end -->
+
+    </main><!-- .main end -->
+
+    <footer class="footer">
+
+        <div class="top_btn">
+            <a href="#">
+                <img src="img/icon/button-up.png" alt="">
+            </a>
+        </div><!-- top_btn end -->
+
+        <div class="inner">
+            <img src="img/logo1.png" alt="">
+
+            <div class="text_wrap">
+
+                <div class="left">
+                    <ul class="text">
+                        <li>주소: 부산 수영구 민락수변로 15</li>
+                        <li>대표이사: 이미혜</li>
+                        <li>사업자등록번호: 140-85-27551</li>
+                        <li>전화번호: 051-757-0067</li>
+                        <li>메일: hotelbamu@gmail.com</li>
+                    </ul><!-- .text end -->
+                    <span>Copyright ©2025. B'AMU HOTEL .All rights reserved.</span>
+                </div><!-- .left end -->
+
+                <div class="right">
+                    <a href="https://www.instagram.com/bamu_hotel.official/">
+                        <img src="img/icon/circum_instagram.png" alt="">
+                    </a>
+                    <a href="https://www.facebook.com/people/BAMU-Hotel/61562511880415/">
+                        <img src="img/icon/uit_facebook-f.png" alt="">
+                    </a>
+                </div><!-- .right end -->
+
+            </div><!-- .text_wrap end -->
+        </div><!-- .inner end -->
+    </footer><!-- .footer end -->
+
+
+</body>
+
+</html>
