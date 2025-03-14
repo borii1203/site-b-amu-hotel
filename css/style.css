@@ -75,6 +75,7 @@ body {
     font-family: 'Gowun Batang';
     font-weight: normal;
     color: #111;
+    min-width: 1920px;
 }
 
 .title {
