@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Sorts Mill Goudy';
-    src: url('/font/SortsMillGoudy-Regular.woff2') format('woff2'),
-        url('/font/SortsMillGoudy-Regular.woff') format('woff');
+    src: url('../font/SortsMillGoudy-Regular.woff2') format('woff2'),
+        url('../font/SortsMillGoudy-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
     font-family: 'Gowun Batang';
-    src: url('/font/GowunBatang-Bold.woff2') format('woff2'),
-        url('/font/GowunBatang-Bold.woff') format('woff');
+    src: url('../font/GowunBatang-Bold.woff2') format('woff2'),
+        url('../font/GowunBatang-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -20,8 +20,8 @@
 
 @font-face {
     font-family: 'Gowun Batang';
-    src: url('/font/GowunBatang-Regular.woff2') format('woff2'),
-        url('/font/GowunBatang-Regular.woff') format('woff');
+    src: url('../font/GowunBatang-Regular.woff2') format('woff2'),
+        url('../font/GowunBatang-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -29,8 +29,8 @@
 
 @font-face {
     font-family: 'Noto Sans KR';
-    src: url('/font/NotoSansKR-Light.woff2') format('woff2'),
-        url('/font/NotoSansKR-Light.woff') format('woff');
+    src: url('../font/NotoSansKR-Light.woff2') format('woff2'),
+        url('../font/NotoSansKR-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -38,8 +38,8 @@
 
 @font-face {
     font-family: 'Noto Sans KR';
-    src: url('/font/NotoSansKR-Medium.woff2') format('woff2'),
-        url('/font/NotoSansKR-Medium.woff') format('woff');
+    src: url('../font/NotoSansKR-Medium.woff2') format('woff2'),
+        url('../font/NotoSansKR-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -47,8 +47,8 @@
 
 @font-face {
     font-family: 'Noto Sans KR';
-    src: url('/font/NotoSansKR-Regular.woff2') format('woff2'),
-        url('/font/NotoSansKR-Regular.woff') format('woff');
+    src: url('../font/NotoSansKR-Regular.woff2') format('woff2'),
+        url('../font/NotoSansKR-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -261,11 +261,9 @@ body {
 
 .main .main_visual {
     height: 1080px;
-    width: 100%
 }
 .main .main_visual .swiper {
     height: 100%;
-    width: 100%
 }
 
 .main .main_visual .swiper-slide img {
