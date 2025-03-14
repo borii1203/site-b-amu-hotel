@@ -261,9 +261,11 @@ body {
 
 .main .main_visual {
     height: 1080px;
+    width: 100%
 }
 .main .main_visual .swiper {
     height: 100%;
+    width: 100%
 }
 
 .main .main_visual .swiper-slide img {
