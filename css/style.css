@@ -75,7 +75,6 @@ body {
     font-family: 'Gowun Batang';
     font-weight: normal;
     color: #111;
-    min-width: 1920px;
 }
 
 .title {
@@ -255,35 +254,34 @@ body {
     visibility: visible;
 }
 
-.main {
+.main_visual {
+    height: 100vh;
+    width: 100%;
+}
+.main_visual .swiper {
+    height: 100%;
     width: 100%;
 }
 
-.main .main_visual {
-    height: 1080px;
-}
-.main .main_visual .swiper {
-    height: 100%;
-}
-
-.main .main_visual .swiper-slide img {
+.main_visual .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.main .swiper-button-next,
-.main .swiper-button-prev {
+.main_visual .swiper-button-next,
+.main_visual .swiper-button-prev {
     color: #E6E4DD;
 }
 
-.main .swiper-button-next:after,
-.main .swiper-button-prev:after {
+.main_visual .swiper-button-next:after,
+.main_visual .swiper-button-prev:after {
     font-size: 80px;
     transform: scaleX(0.7);
 }
 
-.main .swiper-pagination-fraction {
+.main_visual .swiper-pagination-fraction {
     color: #555;
 }
 
@@ -306,10 +304,6 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-
-.section_01 .item_wrap .item {}
-
-.section_01 .item_wrap .item img {}
 
 .section_01 .item_wrap .item .text {
     margin-top: 10px;
@@ -355,10 +349,6 @@ body {
 .section_02 .text {
     width: 50%;
 }
-
-.section_02 .text .title {}
-
-.section_02 .text .title h2 {}
 
 .section_02 .text .title span {
     left: 4%;
@@ -529,8 +519,6 @@ body {
     padding: 80px 0;
 }
 
-.section_04 .title span {}
-
 .section_04 .item_wrap {
     margin-top: 80px;
 }
@@ -653,24 +641,16 @@ body {
     top: 80%;
 }
 
-.footer .top_btn a img {}
-
 .footer .inner {
     width: 1400px;
     margin: 0 auto;
 }
-
-.footer .inner img {}
 
 .footer .inner .text_wrap {
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
 }
-
-.footer .inner .text_wrap .left {}
-
-.footer .inner .text_wrap .left .text {}
 
 .footer .inner .text_wrap .left .text li {
     font-size: 14px;
@@ -679,9 +659,3 @@ body {
 .footer .inner .text_wrap .left span {
     font-size: 12px;
 }
-
-.footer .inner .text_wrap .right {}
-
-.footer .inner .text_wrap .right a {}
-
-.footer .inner .text_wrap .right a img {}
