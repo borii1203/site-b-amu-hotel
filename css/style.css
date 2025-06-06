@@ -77,6 +77,10 @@ body {
     color: #111;
 }
 
+section {
+    margin-top: 200px;
+}
+
 .title {
     position: relative;
     margin-bottom: 80px;
@@ -91,15 +95,15 @@ body {
 .title span {
     font-size: 18px;
     color: #D1D1CF;
-    position: absolute;
-    bottom: -50%;
-    left: 50%;
-    transform: translate(-50%, 0);
 }
 
+.section .inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 .header {
-    margin: 0 auto;
     position: fixed;
     z-index: 300;
     top: 30px;
@@ -258,6 +262,7 @@ body {
     height: 100vh;
     width: 100%;
 }
+
 .main_visual .swiper {
     height: 100%;
     width: 100%;
@@ -283,10 +288,6 @@ body {
 
 .main_visual .swiper-pagination-fraction {
     color: #555;
-}
-
-.section_01 {
-    margin: 200px 0;
 }
 
 .section_01 h4 {
@@ -319,22 +320,25 @@ body {
 }
 
 .section_02 {
-    width: 1400px;
-    display: flex;
-    margin: 0 auto;
-    column-gap: 160px;
-    align-items: center;
     position: relative;
 }
+
+.section_02 .inner {
+    display: flex;
+    column-gap: 160px;
+    align-items: center;
+}
+
 .section_02 .back_image {
     width: 634px;
     height: 596px;
     background-color: #E6E4DD;
     position: absolute;
     top: -60px;
-    left: -20%;
+    left: 0;
     z-index: -1;
 }
+
 .section_02 .image {
     width: 50%;
     height: 596px;
@@ -350,13 +354,10 @@ body {
     width: 50%;
 }
 
-.section_02 .text .title span {
-    left: 4%;
-}
-
 .section_02 .text p {
     margin-bottom: 50px;
     font-size: 18px;
+    word-break: keep-all;
 }
 
 .section_02 .text .btn_wrap {
@@ -379,6 +380,7 @@ body {
 .section_02 .text .btn_wrap .item a {
     display: block;
 }
+
 .section_02 .left_overlay {
     display: none;
     width: 100%;
@@ -389,6 +391,7 @@ body {
     left: 0;
     z-index: 100;
 }
+
 .section_02 .left_overlay.active {
     display: block;
 }
@@ -403,6 +406,7 @@ body {
     left: 0;
     z-index: 100;
 }
+
 .section_02 .right_overlay.active {
     display: block;
 }
@@ -453,13 +457,11 @@ body {
     margin: 35px auto;
 }
 
-
-
-
 .section_02 .text .btn_wrap a:hover {
     background-color: #D1D1CF;
     color: white;
 }
+
 .section_02 .swiper-slide {
     width: 880px;
     height: 554px;
@@ -470,12 +472,13 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 .section_03 {
-    width: 1218px;
-    margin: 200px auto;
+    max-width: 1438px;
+    width: 100%;
+    padding-inline: 80px;
     text-align: center;
 }
-
 
 .section_03 .swiper-wrapper .swiper-slide {
     width: 350px;
@@ -513,7 +516,6 @@ body {
 }
 
 .section_04 {
-    margin: 0 auto;
     text-align: center;
     background-color: #E6E4DD;
     padding: 80px 0;
@@ -524,7 +526,7 @@ body {
 }
 
 .section_04 .item_wrap .item {
-    width: 1400px;
+    width: 100%;
     height: 280px;
     position: relative;
     overflow: hidden;
@@ -537,9 +539,11 @@ body {
     object-fit: cover;
     transition: 0.7s;
 }
+
 .section_04 .item_wrap .item:nth-child(1) img {
     object-position: 0 60%;
 }
+
 .section_04 .item_wrap .item:nth-child(2) img {
     object-position: 0 80%;
 }
@@ -574,19 +578,17 @@ body {
 }
 
 .section_05 {
-    width: 1400px;
-    margin: 200px auto;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 200px;
 }
 
 .section_05 .root_daum_roughmap .cont {
     display: none;
 }
 
-
-.section_05 .title span {
-    left: 15%;
+.section_05 .info_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .section_05 .text {
@@ -603,8 +605,24 @@ body {
     font-size: 18px;
 }
 
+.section_05 .map {
+    width: 750px;
+    height: 400px;
+}
+
+.section_05 .map .root_daum_roughmap {
+    width: 100%;
+    height: 100%;
+}
+
 .footer {
     background-color: #D1D1CF;
+}
+
+.footer .inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .footer .top_btn {
@@ -649,7 +667,7 @@ body {
 .footer .inner .text_wrap {
     display: flex;
     justify-content: space-between;
-    padding: 8px 0;
+    padding: 8px 0 40px 0;
 }
 
 .footer .inner .text_wrap .left .text li {
@@ -658,4 +676,141 @@ body {
 
 .footer .inner .text_wrap .left span {
     font-size: 12px;
+}
+
+
+@media screen and (max-width:1700px) {
+    .section .inner {
+        max-width: 1600px;
+        width: 100%;
+        padding-inline: 80px;
+    }
+
+    .header .inner {
+        width: 1200px;
+    }
+
+    .section_02 .back_image {
+        width: 534px;
+    }
+
+    .footer .inner {
+        max-width: 1600px;
+        width: 100%;
+        padding-inline: 80px;
+    }
+
+    .footer .top_btn a::after,
+    .footer .top_btn a::before {
+        width: 550px;
+    }
+}
+
+
+@media screen and (max-width:1400px) {
+    .header .inner {
+        width: 1000px;
+    }
+
+    .section_02 .back_image {
+        width: 410px;
+        height: 460px;
+    }
+
+    .section_04 .item_wrap .item {
+        height: 250px;
+    }
+
+    .footer .top_btn a::after,
+    .footer .top_btn a::before {
+        width: 410px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .section .inner,
+    .footer .inner {
+        max-width: 1600px;
+        width: 100%;
+        padding-inline: 40px;
+    }
+
+    .header .inner {
+        width: 880px;
+    }
+
+    .section_05 .map {
+        width: 600px;
+    }
+
+    .section_02 .inner {
+        column-gap: 85px;
+    }
+
+    .section_02 .image {
+        height: 480px;
+    }
+
+    .footer .top_btn a::after,
+    .footer .top_btn a::before {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    section {
+        margin-top: 140px;
+    }
+
+    .section_05 {
+        margin-bottom: 140px;
+    }
+
+    .header .inner {
+        width: 740px;
+    }
+
+    .header .inner .nav .gnb {
+        width: 400px;
+    }
+
+    .header .inner .nav .gnb>li .depth-01 {
+        padding: 0 12px;
+    }
+
+    .section_01 .item_wrap {
+        max-width: 100%;
+        width: calc(100% - 80px);
+    }
+
+    .section_04 .item_wrap .item {
+        height: 210px;
+    }
+
+    .section_05 .map {
+        width: 510px;
+    }
+
+    .footer .top_btn a::after,
+    .footer .top_btn a::before {
+        width: 280px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    section {
+        margin-top: 80px;
+    }
+
+    .section_05 {
+        margin-bottom: 80px;
+    }
+
+    .section .inner,
+    .footer .inner {
+        max-width: 1600px;
+        width: 100%;
+        padding-inline: 20px;
+    }
 }
