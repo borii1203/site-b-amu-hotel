@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>바뮤호텔</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -32,20 +32,24 @@
             });
 
             var swiper = new Swiper(".item_swiper", {
-                slidesPerView: 2,
-                spaceBetween: 30,
+                slidesPerView: 1.7,
+                spaceBetween: 20,
                 scrollbar: {
                     el: ".swiper-scrollbar",
                     hide: false,
                 },
                 breakpoints: {
                     768: {
-                        slidesPerView: 2.4,
-                        spaceBetween: 20,
+                        slidesPerView: 2,
+                        spaceBetween: 30,
                     },
                     1024: {
                         slidesPerView: 3,
-                        spaceBetween: 50,
+                        spaceBetween: 30,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 70,
                     },
                     1400: {
                         slidesPerView: 3,
@@ -174,6 +178,10 @@
                 </ul>
             </div><!-- .button end -->
 
+            <button type="button" class="m_btn mobile">
+                <img src="img/icon/menu.png" alt="">
+            </button><!-- .button end -->
+
         </div><!-- .inner end -->
     </header><!-- .header end -->
 
@@ -216,8 +224,7 @@
                 <div class="item_wrap">
 
                     <div class="item">
-                        <img src="img/icon/travel-hotel-bath-tub--bathe-bath-bathroom-towel-water-tub--Streamline-Core.png"
-                            alt="">
+                        <img src="img/icon/bath.png" alt="">
                         <div class="text">
                             <p>전 객실 스파 시설</p>
                             <span>Spa facility</span>
@@ -225,7 +232,7 @@
                     </div><!-- .item end -->
 
                     <div class="item">
-                        <img src="img/icon/guidance_24-hours.png" alt="">
+                        <img src="img/icon/24hours.png" alt="">
                         <div class="text">
                             <p>24시간 운영</p>
                             <span>Open 24 hours</span>
@@ -233,8 +240,7 @@
                     </div><!-- .item end -->
 
                     <div class="item">
-                        <img src="img/icon/food-drinks-tea-cup--herbal-cook-tea-tisane-cup-drink-cooking-nutrition-mug-food--Streamline-Core.png"
-                            alt="">
+                        <img src="img/icon/brunch.png" alt="">
                         <div class="text">
                             <p>간단한 아침 제공</p>
                             <span>Breakfast service</span>
@@ -242,7 +248,7 @@
                     </div><!-- .item end -->
 
                     <div class="item">
-                        <img src="img/icon/Group.png" alt="">
+                        <img src="img/icon/location.png" alt="">
                         <div class="text">
                             <p>편리한 위치</p>
                             <span>Good location</span>
@@ -279,7 +285,7 @@
                             <a href="#" class="left_button">room view</a>
 
                             <div class="left_overlay">
-                                <div class="left_image">
+                                <div class="left_image image">
 
                                     <div class="swiper mySwiper_image">
 
@@ -311,7 +317,7 @@
                             <a href="#" class="right_button">ocean view</a>
 
                             <div class="right_overlay">
-                                <div class="right_image">
+                                <div class="right_image image">
 
                                     <div class="swiper mySwiper_image">
 
@@ -491,24 +497,6 @@
                 </div><!-- .title end -->
 
                 <div class="info_wrap">
-                    <div class="bottom_text" data-aos="fade-right" data-aos-duration="1700">
-                        <div class="text">
-                            <p>자동차</p>
-                            <span>부산 수영구 민락수변로 15</span>
-                        </div><!-- .text end -->
-
-                        <div class="text">
-                            <p>버스</p>
-                            <span>민락동 골목시장 정류장에서 하차<br>
-                                (62, 41, 83, 108, 38, 83-1번)</span>
-                        </div><!-- .text end -->
-
-                        <div class="text">
-                            <p>지하철</p>
-                            <span>광안역(2호선)에서 하차하여 도보로 20분</span>
-                        </div><!-- .text end -->
-                    </div><!-- .bottom_text end -->
-
                     <div class="map" data-aos="fade-left" data-aos-duration="1700">
                         <!-- * 카카오맵 - 지도퍼가기 -->
                         <!-- 1. 지도 노드 -->
@@ -532,6 +520,24 @@
                             }).render();
                         </script>
                     </div><!-- .map end -->
+
+                    <div class="bottom_text" data-aos="fade-right" data-aos-duration="1700">
+                        <div class="text">
+                            <p>자동차</p>
+                            <span>부산 수영구 민락수변로 15</span>
+                        </div><!-- .text end -->
+
+                        <div class="text">
+                            <p>버스</p>
+                            <span>민락동 골목시장 정류장에서 하차<br>
+                                (62, 41, 83, 108, 38, 83-1번)</span>
+                        </div><!-- .text end -->
+
+                        <div class="text">
+                            <p>지하철</p>
+                            <span>광안역(2호선)에서 하차하여 도보로 20분</span>
+                        </div><!-- .text end -->
+                    </div><!-- .bottom_text end -->
                 </div><!-- .info_wrap end -->
             </div><!-- .inner end -->
         </section><!-- .section_05 end -->
